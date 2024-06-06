@@ -1,0 +1,224 @@
+<html>
+    <head> <title>Class Activity 1</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+       
+      
+        <style>
+          
+          #storydiv { 
+                height: 100%;
+                position: relative;         
+              }
+                      
+            #storydiv p {
+                margin: 0;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                -ms-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+            }
+            
+            .maindiv{
+                border:5px ridge rgb(12, 96, 206);
+                margin:1%;
+                border-radius:20px
+            }
+
+            p{
+                font-size:30px;
+                font-weight: bold;
+            }
+
+           
+
+            #nextbtn, #backbtn, #newbtn{
+                width: 25%;
+                font-size:20px;
+                margin-right: 5%;
+                position: relative;
+                
+            }
+
+            #backbtn, #newbtn{
+                display:none;
+            }
+
+            #family{
+                width:95%;
+                height:95%;
+            }
+
+            #about{
+                font-weight: bold;
+                font-size:40px;
+                color:rgb(7, 7, 89)
+            }
+
+            #story{ 
+                font-size: 1.28vw;
+                border-radius: 20px;
+            }
+
+            #imgdiv{
+                position:relative;
+            }
+         
+        
+        </style>
+</head>
+
+    <body> 
+        <div class="header" style="width:100%; box-shadow:5px 5px 10px rgb(0, 0, 0); padding-bottom:10px;">
+            <img src="Logo_last.png" width="5%" style="float:left; margin-top:25px;" class="img-responsive">
+            <span> <img src="header.png" width="30%" height="100px" class="img-responsive"></span>
+        </div>
+         <br>
+        <br>
+        
+        <center>
+            <h2 id="about">Pronouns</h2>
+            <div class="maindiv container-fluid" style="height:60%;">
+               <div class="col-lg-6 col-md-6 col-sm-6 col-xs-11 imgdiv">
+                   <img id="family" src="2.jpg" style="width:100%;"> 
+               </div>
+               <div class="col-lg-6 col-md-6 col-sm-6 col-xs-11" id='storydiv'>
+                   <p id="story" style="text-align:left; width:100%;font-size: 18px;"> 
+
+
+
+
+                    "Have you ever played the game 'Who am I?' where someone describes themselves, and you have to guess who they are? <br><br>
+
+                    Today we are going to learn about the words that help us play that game – they are called <span style="color: blue;"> pronouns </span>! <br> <br>
+                    
+                    Pronouns are like secret code words used to talk about people, places, or things without constantly repeating their names. 
+                    
+             
+
+
+
+
+
+
+                    
+                </p> 
+            </div>
+        </center>     
+        </div>
+        <br>
+        <div class="" style="text-align:center;">
+            
+            <button id="backbtn" onclick="backpic()" class="btn btn-success">Back</button>
+            <button id="nextbtn" onclick="update()" class="btn btn-success">Continue</button>
+            <button id="newbtn" onclick="newpage()" class="btn btn-success">Next</button>
+            
+       
+        </div>  
+
+
+        </center>   
+
+        <script>
+
+            var images = ["Assets/1.jpg", "Assets/2.jpg", "Assets/3.jpg", "Assets/4.jpg", "Assets/5.jpg", "Assets/6.jpg","Assets/7.jpg","Assets/8.jpg","Assets/9.jpg","Assets/10.jpg","Assets/11.jpg","Assets/12.jpg","Assets/13.jpg",];
+            var para=["Instead of saying 'John went to the park, and John played on the swings, and John had a lot of fun,' we can use pronouns like '<span style='color: blue;'>he</span>' or '<span style='color: blue;'>his</span>' to make it easier.  <br><br><span style='background-color:yellow;'>For example</span>, we could say, 'John went to the park. He played on the swings and had a lot of fun.' Isn't that much simpler?  <br><br>There are different kinds of pronouns, too. Some, like 'he' and 'she,' are used to talk about people. Others, like 'it' and 'they,' can be used for animals or things. <br><br>In today's class, we will learn more about pronouns and their types. <br><br>Let us read a fun story about Tessa and Toby, who are baby tigers……….",
+
+
+                        "Once upon a time in the heart of the jungle, two adorable baby tigers named Tessa and Toby were born. They were not your ordinary tiger cubs, they were the mischievous duo of the jungle, always getting into playful trouble.",
+
+                        "<span style='color: blue;'>Personal Pronouns </span> are simple pronouns that are used to substitute proper names. <br><br><span style='background-color: yellow;'>For example</span>, if I say, 'Tessa and Toby were playing in the jungle,' you could say, 'They were playing in the jungle.' <br><br>Look how the pronoun “they” took the place of “Tessa and Toby” and also made the sentence shorter.",
+
+                        "See how we used 'she' instead of repeating Sophie’s name? That's a personal pronoun! <br><br>We used the personal pronoun “<span style='font-weight: bolder;'>She</span>” with Sophie because Sophie is a female/girl.",
+
+                       
+
+                        "<img src='5th.jpg' style='width: 100%;' alt=''>",
+
+                        "<span style='background-color:yellow;'>For example</span>: <span style='color: blue;'> I </span> played soccer after school yesterday. The subject pronoun 'I' replaces the subject noun, which is the person doing the action of playing soccer.",
+
+                        "<span style='background-color:yellow;'>For example</span>: Mummy gave me a new book.<br><br> The object pronoun 'me' receives the action of giving from the subject 'Mummy'.",
+
+                        "Tessa had a distinct golden coat with striking black stripes, while Toby’s fur was a vibrant orange with a touch of white on his belly. Together, they formed the perfect pair, exploring the lush greenery with their tiny paws and wide-eyed curiosity.",
+
+
+                        "Well, there is a pronoun in this sentence and that is “his”.<br><br>In this case, the word 'his' indicates that the belly belongs to Toby. It is showing some kind of ownership or possession of something. <br><br>And that is the reason “<span style='background-color:yellow;'>his</span>” is a possessive pronoun.",
+
+                        "By using the possessive pronoun 'his', we avoid having to repeat Toby's name twice in the sentence.<br><br>Some possessive pronouns are:<br><li>my</li> <li>mine</li> <li>ours</li> <li>yours</li> <li>his</li> <li>hers</li> <li>theirs </li><li>whose</li>",
+
+                        "For the personal pronoun, ‘he’, the possessive pronoun would be ‘his’.For example, to indicate that “It is <span style='color: blue;'> Austin’s </span> pet dog”, it can be written as “It is <span style='color: blue;'> his </span> pet dog,” <br><br>For the personal pronoun, ‘she’, the possessive pronoun would be ‘hers’.For example, to indicate that “The gift Sophie brought was better than the gifts <span style='color: blue;'> Lisa </span> brought,” it can be written as “The gift Sophie brought was better than  <span style='color: blue;'>hers</span>.”",
+
+
+                        "For the personal pronoun, ‘<span style='color: blueviolet;font-style:italic;'>they</span>’, the possessive pronoun would be ‘theirs’. <br><br>If something belongs to a group of people, it is indicated by the possessive pronoun ‘theirs’.<br><br> <span style='color: blue;'><u> For example</u>:</span> “The dance performance of the second group was more innovative than the fourth group.”, it can be written as “The dance performance of the second group was more innovative than theirs.”",
+
+                        "One sunny afternoon, Tessa and Toby decided to embark on an adventure to the Great Watering Hole. It was a legendary spot where all the jungle animals gathered to quench their thirst and share stories. This journey was filled with laughter and playful pounces as the mischievous duo encountered butterflies and swung from vines.",
+
+                        "Let us take this sentence.<br><br>“<span style='color: blue;'>This journey was filled with laughter and playful pounces as the mischievous duo encountered butterflies and swung from vines.</span>” <br><br>The paragraph, 'This journey was filled with laughter...' uses 'this' to talk about the journey Tessa and Toby are currently on.<br><br>“This” is also a pronoun and it is a demonstrative pronoun. Now, let’s understand it.",
+            
+
+                    ]
+            
+                    var i = -1;
+            function update(){
+                i++
+                document.getElementById("backbtn").style.display="inline-block"
+                if(i > para.length-1){
+                    document.getElementById("nextbtn").style.display="none"
+                    document.getElementById("newbtn").style.display="inline-block"
+                    document.getElementById("family").src = "last.jpg";
+                    document.getElementById("story").style.fontSize="18px"
+                    document.getElementById("story").style.borderLeftStyle="solid"
+                    document.getElementById("story").style.borderLeftColor="rgb(164, 246, 229)"
+                    document.getElementById("about").innerHTML = "Tessa & Toby the Baby Tigers";
+                    document.getElementById("story").innerHTML = " Demonstrative pronouns are: <br><li>This</li><li>That</li><li>Those</li><li>These</li><br>Let’s put them into sentences: <li><span style='font-weight: bolder;'>This</span> apple tastes delicious.</li><li><span style='font-weight: bolder;'>That</span> car is very fast.</li><li><span style='font-weight: bolder;'>These</span> cookies are freshly baked.</li><li><span style='font-weight: bolder;'>Those</span> birds are flying high.</li>";
+                }
+                else{
+                    document.getElementById("story").style.fontSize="1.25vw"
+                    document.getElementById("story").style.backgroundColor="white"
+                    document.getElementById("about").innerHTML="Tessa & Toby the Baby Tigers"
+                     var updated_image = images[i]; 
+                var newpara =para[i];
+                document.getElementById("family").src = updated_image;
+                document.getElementById("story").innerHTML = newpara;
+              
+            }
+            };
+
+            function newpage(){
+                window.location="ac2.html"
+            }
+
+            function backpic(){
+                i=i-1
+                console.log(i)
+
+                if(i<0){
+                    document.getElementById("story").style.fontSize="1.25vw"
+                    document.getElementById("backbtn").style.display="none"
+                    document.getElementById("nextbtn").style.display="inline-block"
+                    document.getElementById("family").src = "2.jpg";
+                    document.getElementById("about").innerHTML="Pronouns"
+                    document.getElementById("story").innerHTML = 'Have you ever played the game "Who am I?" where someone describes themselves, and you have to guess who they are? <br><br>Today we are going to learn about the words that help us play that game – they are called <span style="color: blue;"> pronouns </span>! <br> <br>Pronouns are like secret code words used to talk about people, places, or things without constantly repeating their names.  ';
+                }
+                else{
+                document.getElementById("story").style.fontSize="1.25vw"
+                document.getElementById("story").style.backgroundColor="white"
+                document.getElementById("nextbtn").style.display="inline-block"
+                document.getElementById("about").innerHTML="Tessa & Toby the Baby Tigers"
+                var updated_image = images[i]; 
+                var newpara =para[i];
+                document.getElementById("family").src = updated_image;
+                document.getElementById("story").innerHTML = newpara;
+                }
+            }
+
+    
+    </script>
+        
+    </body>
+</html>
